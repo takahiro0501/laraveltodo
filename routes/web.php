@@ -16,5 +16,5 @@ use App\Http\Controllers\TaskController;
 
 Route::get('/', [TaskController::class, 'index']);
 Route::post('/todo/create', [TaskController::class, 'create']);
-Route::post('/todo/update', [TaskController::class, 'update']);
-Route::post('/todo/delete', [TaskController::class, 'delete']);
+Route::post('/todo/update/{id}', [TaskController::class, 'update'])->name('todo.upd');
+Route::post('/todo/delete/{id}', [TaskController::class, 'delete'])->name('todo.del');;

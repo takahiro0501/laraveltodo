@@ -30,15 +30,13 @@
             <input class="content__task-name-input" name="content" value="{{$item->content}}">
         </div>
         <div class="content__task-upd">
-            <button class="btn btn--orange" type="submit" formaction="/todo/update">更新</button>
+            <button class="btn btn--orange" type="submit" formaction="{{route('todo.upd', ['id' => $item->id])}}">更新</button>
         </div>
         <div class="content__task-del">
-            <button class="btn btn--green" type="submit" formaction="/todo/delete">削除</button>
+            <button class="btn btn--green" type="submit" formaction="{{route('todo.del', ['id' => $item->id])}}">削除</button>
         </div>
-        <input type="hidden" name="id" value="{{$item->id}}">
     </form>
     @endforeach
 </div>
-
 
 @endsection
